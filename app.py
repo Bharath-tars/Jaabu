@@ -4,7 +4,9 @@ from firebase_admin import credentials, db
 
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate('ecommerceimg-6ecf3-firebase-adminsdk-gcz83-47880583e1.json')  # Replace with your Firebase credentials file
+    CredentialCertificate = os.environ.get('CREDENTIALCERTIFICATE')
+    firebase_credentials_dict = json.loads(CredentialCertificate)
+    cred = credentials.Certificate(firebase_credentials_dict)  # Replace with your Firebase credentials file
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://ecommerceimg-6ecf3-default-rtdb.asia-southeast1.firebasedatabase.app/'
     })
