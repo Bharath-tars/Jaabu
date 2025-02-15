@@ -2,7 +2,7 @@ import streamlit as st
 import firebase_admin
 from firebase_admin import credentials, db
 
-# Initialize Firebase
+# Initialize Firebasee
 if not firebase_admin._apps:
     CredentialCertificate = os.environ.get('CREDENTIALCERTIFICATE')
     firebase_credentials_dict = json.loads(CredentialCertificate)
