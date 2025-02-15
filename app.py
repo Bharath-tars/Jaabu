@@ -13,7 +13,7 @@ if not firebase_admin._apps:
         'databaseURL': 'https://ecommerceimg-6ecf3-default-rtdb.asia-southeast1.firebasedatabase.app/'
     })
 
-# Fetch job domains from Firebase
+# Fetch job domains from Firebasee
 def fetch_job_domains():
     job_domains = []
     jobs_ref = db.reference("jobs").get()
