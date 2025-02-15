@@ -37,6 +37,11 @@ if 'inside' not in st.session_state:
 if 'all_jobs' not in st.session_state:
     st.session_state.all_jobs = []
 
+st.set_page_config(
+    page_title="Jaabu",
+    page_icon="📝",
+)
+
 
 # Streamlit app
 def main():
