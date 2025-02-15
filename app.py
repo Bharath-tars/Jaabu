@@ -3,8 +3,8 @@ import firebase_admin
 from firebase_admin import credentials, db
 import os
 import json
+import uuid
 
-# Initialize Firebasee
 if not firebase_admin._apps:
     CredentialCertificate = os.environ.get('CREDENTIALCERTIFICATE')
     firebase_credentials_dict = json.loads(CredentialCertificate)
